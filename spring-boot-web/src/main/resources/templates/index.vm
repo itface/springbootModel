@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)http://www.huangjian.wang/h5/h5-digital.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>王依伊</title>
+    <style>
+
+        .showDay {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 8em;
+            letter-spacing: 0.1em;
+            color: rgb(0,102,153);
+            animation: rotate 2s ease-in-out alternate infinite;
+        }
+        .showDay:before {
+            content: attr(data-shadow);
+            color: transparent;
+            text-shadow: 0 0 15px #111;
+            position: absolute;
+            z-index: -1;
+            margin: -0.1em 0 0 0;
+            animation: skew 2s ease-in-out alternate infinite;
+            transform-origin: bottom;
+        }
+        @keyframes rotate {
+            from {
+                transform: rotateY(-10deg);
+                text-shadow:  1px -1px #CCC,
+                2px -1px #BBB,
+                3px -2px #AAA,
+                4px -2px #999,
+                5px -3px #888,
+                6px -3px #777;
+            }
+            to {
+                transform: rotateY(10deg);
+                text-shadow:  -1px -1px #CCC,
+                -2px -1px #BBB,
+                -3px -2px #AAA,
+                -4px -2px #999,
+                -5px -3px #888,
+                -6px -3px #777;
+            }
+        }
+        @keyframes skew {
+            from {
+                transform: scaleY(0.3) skewX(-15deg);
+            }
+            to {
+                transform: scaleY(0.3) skewX(-20deg);
+            }
+        }
+
+    </style>
+</head>
+<body style="height: 100%;">
+<div style="border-radius:25px;-moz-border-radius:25px;">
+
+    <div style="float: left;padding-top: 100px;padding-left: 40px">
+        <h1 data-shadow="" class="showDay"></h1>
+    </div>
+    <div style="float: right;padding-top: 20px;padding-right: 40px;">
+        <p><a href="javascript:void(0)" style="color:#fff;cursor:default">
+            王依伊
+        </a></p>
+    </div>
+</div>
+<!--建议采用height  width设置canvas的高度和宽度  而不在css中设置-->
+<canvas id="canvas" style="height:100%;" width="1280" height="612" style="padding: 0px">
+    当前浏览器不支持canvas，请更换浏览器后再试
+</canvas>
+
+<link rel="stylesheet" href="/style/style.css" media="screen" type="text/css">
+
+<script type="text/javascript" src="/js/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="/js/digit.js"></script>
+<script type="text/javascript" src="/js/countdown.js"></script>
+
+
+</body></html>
